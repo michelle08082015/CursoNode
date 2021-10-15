@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+	<html lang="pt-br">
+		<head>
+			<meta charset="utf-8"/>
+			<title>Not�cias</title>
+		</head>
+	<body>
+
+		<h1>Not�cias</h1>
+		
+		<table>
+			<tr>
+				<td>ID</td>
+				<td>Titulo coluna</td>
+				<td>Noticias coluna</td>
+			</tr>
+			<% for(var i=0; i < listaDeNoticias.length; i++) { %>
+				<tr>
+					<td><a target="_blank" href="<%= `/noticias/${listaDeNoticias[i].id_noticia}` %>">link da noticia</a></td>
+					<td> <%= listaDeNoticias[i].id_noticia %></td>
+					<td><%= listaDeNoticias[i].titulo %></td>
+					<td><%= listaDeNoticias[i].noticia %></td>
+				</tr>
+			<%} %>
+		</table>
+
+
+	</body>
+</html>
